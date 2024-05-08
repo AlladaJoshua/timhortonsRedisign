@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/Assets/favicon.ico" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tim Hortons</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <img src="/Assets/TimHortons.png" alt="Logo" />
+          </div>
+          <div class="left_side">
+            <div class="links">
+              <ul>
+                <li>Menu</li>
+                <li>Find Store</li>
+                <li>Join Us</li>
+                <li>#TeamCarePH</li>
+                <li>Sign In</li>
+              </ul>
+            </div>
+            <div class="btns">
+              <img src="/Assets/shoppingBag.png" alt="Shopping Bag" />
+              <span>0</span>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="find_store_main">
+        <div class="find_store_search">
+          <div class="searchBar">
+            <input type="text" placeholder="Find Store">
+            <i class='bx bx-search-alt-2' ></i>
+          </div>
+            <div class="dropdown">
+              <button onclick="storeFilter()" class="dropbtn" id="btn"><i class='bx bx-slider-alt' ></i>Filter</button>
+              <div id="dropdown" class="dropdown-content">
+                <button onclick="viewMap()">Map</button>
+                <button onclick="viewList()">List</button>
+              </div>
+            </div>
+        </div>
+        <section class="right_side_find_store">
+            <div class="find_store_tabs">
+              <div class="tabs" id="tabs-button">
+                <button class="active">Nearby</button>
+                <button>Favorites</button>
+                <button>Recent</button>
+              </div>
+            </div>
+            <div class="tabs_content" id="tabs-content">
+              <img src="Assets/image_3.png" alt="Red Shopping Bag">
+              <h1>Find a Location Nearby</h1>
+              <p>Let us know where you are so we can recommend nearby locations.</p>
+              <button>Share Location</button>
+            </div>
+        </section>
+        <section class="left_side_find_store" id="maps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15441.659528980077!2d121.04497624751131!3d14.632375071129069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7bfa25cb37f%3A0xc3a1540ea3d0c938!2sTim%20Hortons%20-%20Araneta%20City!5e0!3m2!1sen!2sph!4v1713532790673!5m2!1sen!2sph" width="590" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+      </main>
+      <footer>
+        <section class="first_row">
+            <section class="careers">
+              <a href="#">Careers</a>
+              <a href="#">Come join the team</a>
+              <a href="#">Browse Opportunities</a>
+            </section>
+            <section class="community">
+              <a href="#">Community</a>
+              <a href="#">Make a true difference</a>
+              <a href="#">Learn More</a>
+            </section>
+            <section class="find_tim_hortons">
+              <a href="#">Find a Tim Hortons</a>
+              <a href="#">We can't wait to serve you</a>
+              <a href="#">Store Locator</a>
+            </section>
+          </section>
+          <hr class="footer_first_divider" />
+          <section class="first_row middle">
+            <section class="franchise">
+              <a href="#">Franchise</a>
+              <a href="#">Investors</a>
+              <a href="#">Contact Us</a>
+              <a href="#">Frequently Asked Question</a>
+            </section>
+            <section class="privacy_policy">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Trademarks Notice</a>
+              <a href="#">Accessibility</a>
+              <a href="#">Diagnostics</a>
+            </section>
+            <section class="connect_with_us">
+              <div class="social_media">
+                <p>Connect with Us</p>
+                <div class="social_media_icons">
+                    <i class='bx bxl-instagram-alt'></i>
+                    <i class='bx bxl-facebook' ></i>
+                    <i class='bx bxl-twitter'></i>
+                    <i class='bx bxl-youtube' ></i>
+                </div>
+              </div>
+            </section>
+          </section>
+          <hr class="footer_first_divider" />
+          <section class="last_row">
+            <section class="established">
+              <p>TM & © Tim Hortons, 2023</p>
+            </section>
+            <section class="spacer"></section>
+            <section class="language">
+                <i class='bx bx-globe' ></i>
+                <p>EN/US</p>
+            </section>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.getElementById('tabs-button');
+        const maps = document.getElementById('maps');
+        if (tabs) {
+          tabs.classList.add('tabsActive');
+          maps.classList.add("mapsInactive");
+        }
+      })
+
+      function storeFilter() {
+        document.getElementById("dropdown").classList.toggle("show");
+        document.getElementById("btn").classList.toggle("active");
+      }
+
+      function viewMap() {
+        document.getElementById('maps').classList.remove('mapsInactive');
+        document.getElementById('maps').classList.add('mapsActive');
+        document.getElementById('tabs-button').classList.remove('tabsActive');
+        document.getElementById('tabs-button').classList.add('tabsInactive');
+        document.getElementById('tabs-content').classList.remove('tabsActive');
+        document.getElementById('tabs-content').classList.add('tabsInactive');
+      }
+
+      function viewList() {
+        document.getElementById('maps').classList.remove('mapsActive');
+        document.getElementById('maps').classList.add('mapsInactive');
+        document.getElementById('tabs-button').classList.remove('tabsInactive');
+        document.getElementById('tabs-button').classList.add('tabsActive');
+        document.getElementById('tabs-content').classList.remove('tabsInactive');
+        document.getElementById('tabs-content').classList.add('tabsActive');
+      }
+
+      window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var buttons = document.getElementsByClassName("dropbtn");
+          var i;
+          for (i=0; i < dropdowns.length &&  i < buttons.length; i++) {
+            var openDropdown = dropdowns[i];
+            var activeButton = buttons[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+              activeButton.classList.remove("active");
+            } 
+          }
+        }
+      }
+    </script>
+</body>
+</html>
