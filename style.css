@@ -733,3 +733,36 @@ footer {
 
 
 
+
+
+
+#move-up-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #DD0F2D;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+}
+
+#move-up-btn.active {
+    opacity: 1;
+}
+
+#move-up-btn span {
+    transform: translateY(-2px); /* Adjust vertical alignment */
+}
+
+
+
+
