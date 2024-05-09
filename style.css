@@ -535,7 +535,10 @@ footer {
     display: flex;
   }
 
-@media only screen and (min-width: 1920px) {
+
+/* Styles for desktops and larger screens */
+/* This will apply to screens larger than 992px */
+@media only screen and (min-width: 992px) {
     .first_row {
         justify-content: center;
         gap: 280px;
@@ -589,7 +592,10 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 426px) {
+
+/* Styles for tablets and larger screens */
+/* This will apply to screens between 768px and 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     
     .content_card {
         padding-top: 50px;
@@ -634,9 +640,18 @@ footer {
         width: 350px;
         text-align: center;
     }
+
+    nav .left_side {
+        display: none;
+    }
+
+    
 }
 
-@media only screen and (max-width: 425px) {
+
+/* Styles for all devices */
+/* This will apply to screens smaller than 768px (typical tablets) */
+@media only screen and (max-width: 767px) {
     .hero_img {
         padding: 0 20px;
     }
@@ -709,9 +724,7 @@ footer {
         width: 390px;
         height: 600px;
     }
-}
 
-@media only screen and (max-width: 1326px) {
     nav .left_side {
         display: none;
     }
