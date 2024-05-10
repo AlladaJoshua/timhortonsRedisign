@@ -8,9 +8,6 @@
 body {
   background-color: #f9f5ee;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 header {
@@ -872,6 +869,6 @@ footer {
     margin: 0 10px;
   }
   .swiper-navBtn{
-    display: none;
+    display: none !important;
   }
 }
