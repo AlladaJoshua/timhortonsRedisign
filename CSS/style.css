@@ -550,6 +550,10 @@ footer {
     justify-content: center;
     gap: 280px;
   }
+
+  .hr {
+    width: 75%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -587,6 +591,11 @@ footer {
     width: 500px;
     text-align: center;
   }
+
+  .hr {
+    width: 75%;
+  }
+
 }
 
 /* Styles for tablets and larger screens */
@@ -637,6 +646,10 @@ footer {
 
   nav .left_side {
     display: none;
+  }
+
+  .hr {
+    width: 75%;
   }
 }
 
@@ -718,6 +731,10 @@ footer {
   nav .left_side {
     display: none;
   }
+
+  .hr {
+    width: 75%;
+  }
 }
 
 #move-up-btn {
@@ -737,6 +754,7 @@ footer {
   font-size: 24px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
 #move-up-btn.active {
@@ -751,6 +769,20 @@ footer {
 
 
 /* test for carousel */
+
+.header h1 {
+  color: #3f2027;
+}
+
+.card-carousel {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+}
 
 .slide-container{
   max-width: 1120px;
@@ -820,10 +852,14 @@ footer {
   font-size: 18px;
   font-weight: 500;
   color: #333;
+  text-transform: uppercase;
+  z-index: 1;
 }
 .description{
   font-size: 14px;
   color: #707070;
+  height: 85px;
+  text-wrap: balance;
   text-align: center;
 }
 .button{
@@ -871,4 +907,11 @@ footer {
   .swiper-navBtn{
     display: none !important;
   }
+}
+
+.hr {
+  z-index: 2;
+  background-color: #3f2027;
+  width: 50%;
+  height: 2px;
 }
