@@ -554,6 +554,10 @@ footer {
   .hr {
     width: 75%;
   }
+
+  .hamburger {
+    display: none !important;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -594,6 +598,10 @@ footer {
 
   .hr {
     width: 75%;
+  }
+
+  .hamburger {
+    display: none;
   }
 
 }
@@ -644,6 +652,15 @@ footer {
     text-align: center;
   }
 
+  .hamburger {
+    z-index: 100;
+  }
+
+  nav {
+    width: 700px;
+    z-index: 100;
+  }
+
   nav .left_side {
     display: none;
   }
@@ -653,6 +670,10 @@ footer {
   }
 
   .image-container {
+    display: none;
+  }
+
+  .hamburger {
     display: none;
   }
 }
