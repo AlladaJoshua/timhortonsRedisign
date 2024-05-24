@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/Assets/favicon.ico" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Tim Hortons</title>
+</head>
+
+<body>
+    <main class="login-main">
+        <div class="hero-img">
+            <!-- <img src="Assets/Tim-hortons-login-pic.jpg" alt=""> -->
+        </div>
+        <div class="login-container">
+            <div class="logo">
+                <img src="Assets/TimHortonsRed.png" alt="">
+            </div>
+            <div class="find_store_tabs login-form">
+                <div class="tabs" id="tabs-button">
+                    <button id="signin-btn" class="active">Sign In</button>
+                    <button id="signup-btn">Sign Up</button>
+                </div>
+            </div>
+            <div class="signup">
+                <div class="fullname">
+                    <input type="text" placeholder="ex. Juan Dela Cruz">
+                </div>
+                <div class="email">
+                    <input type="email" placeholder="ex. juandelacruz@xyz.com">
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="con-password">
+                    <input type="password" placeholder="Confirm Password">
+                </div>
+                <div class="header-date">
+                    <h3>Date of Birth</h3>
+                    <div class="date-container">
+                        <div class="year-container">
+                            <input type="text" id="Year" placeholder="Year">
+                            <label for="Year">YYYY</label>
+                        </div>
+                        <div class="month-container">
+                            <input type="text" id="Month" placeholder="Month">
+                            <label for="Month">MM</label>
+                        </div>
+                        <div class="day-container">
+                            <input type="text" id="Day" placeholder="Day">
+                            <label for="Day">DD</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="privacy-policy">
+                    <div class="first-policy">
+                        <input type="checkbox">
+                        <p>I want to receive special offers and other information from Tim Hortons via email</p>
+                    </div>
+                    <div class="second-policy">
+                        <input type="checkbox">
+                        <p>I agree to the following: <a href="">Privacy Policy, Tims Rewards Terms and Conditions, Terms of Service</a></p>
+                    </div>
+                </div>
+
+                <div class="submit-btn">
+                    <button class="button">Create Account</button>
+                </div>
+            </div>
+            <div class="signin active">
+                <h1>Sign In</h1>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.onload = function () {
+            const signInButton = document.getElementById('signin-btn');
+            const signUpButton = document.getElementById('signup-btn');
+            const signInSection = document.querySelector('.signin');
+            const signUpSection = document.querySelector('.signup');
+
+            signInButton.addEventListener('click', function () {
+                if (!signInButton.classList.contains('active')) {
+                    signInButton.classList.add('active');
+                    signUpButton.classList.remove('active');
+                    signInSection.classList.add('active');
+                    signUpSection.classList.remove('active');
+                }
+            });
+
+            signUpButton.addEventListener('click', function () {
+                if (!signUpButton.classList.contains('active')) {
+                    signUpButton.classList.add('active');
+                    signInButton.classList.remove('active');
+                    signUpSection.classList.add('active');
+                    signInSection.classList.remove('active');
+                }
+            });
+        };
+    </script>
+</body>
+
+
+</html>
