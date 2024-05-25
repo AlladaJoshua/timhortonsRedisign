@@ -778,6 +778,7 @@ footer {
   .login-main {
     height: 100%;
     /* margin-top: 10px; */
+    overflow: hidden;
   }
 
   .login-main .login-container {
