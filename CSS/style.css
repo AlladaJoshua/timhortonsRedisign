@@ -73,6 +73,10 @@ nav .links ul li a {
   cursor: pointer;
 }
 
+nav .links ul li:last-child a {
+  color: #dd0f2d;
+}
+
 nav .links ul li:last-child {
   background-color: white;
   padding: 10px 18px;
@@ -1138,6 +1142,15 @@ footer {
   background-color: #3f2027;
 }
 
+.mobile-nav a:last-child {
+  background-color: white;
+  padding: 10px 18px;
+  border-radius: 15px;
+  color: #dd0f2d;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .login-main {
   display: flex;
   justify-content: center;
@@ -1178,7 +1191,7 @@ footer {
   display: block;
 }
 
-.signup.active {
+.signup.active{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1186,7 +1199,14 @@ footer {
   gap: 24px;
 }
 
-.signup.active input {
+.signin.active {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+.signup.active input, .signin.active input {
   background: #fff;
   border: 1px solid black;
   font-weight: 500;
@@ -1253,4 +1273,38 @@ footer {
 
 .signin {
   height: 662px;
+}
+
+.google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 40px;
+  border: 1px black solid;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.google p {
+  font-weight: 500;
+}
+
+.google img {
+  width: 50px;
+  height: 25px;
+}
+
+.login-button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #dd0f2d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 50px;
+}
+.login-button:hover{
+  background: #B00C24;
 }
